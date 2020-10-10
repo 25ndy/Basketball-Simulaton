@@ -1,4 +1,3 @@
-# written from Jiseung computer
 import pygame, math
 
 pygame.init()
@@ -23,12 +22,14 @@ WHITE = (255, 255, 255)
 
 
 class Player:
-    def __init__(self, position, height, size, back_number):
+    def __init__(self, position, height, weight, back_number, name):
         self.fouls = 0
         self.position = position
         self.height = height
-        self.size = size
+        self.weight = weight
         self.back_number = back_number
+        self.name = name
+    def place_player
 
 
 def resize(size):
@@ -177,9 +178,14 @@ def drawCourt():
 
 
 def generateTeam():
-    team = None
-    
-    return team
+    p1 = Player('PG',185, 86, 11, 'Myron Boyce')
+    p2 = Player('SG', 198, 94, 24, 'Adam Chester')
+    p3 = Player('SF', 202, 101, 34, 'Daanyal Graves')
+    p4 = Player('PF', 208, 111, 21, 'Tyreese Ward')
+    p5 = Player('C', 217, 121, 12, 'Donovan Robinson') 
+    team1 = (p1,p2,p3,p4,p5)
+
+    return team1
 
 
 def drawTeam(team):
