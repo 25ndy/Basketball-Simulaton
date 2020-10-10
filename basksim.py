@@ -20,7 +20,8 @@ pygame.display.set_caption("Basketball Simulator")
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
-
+def getMousePos():
+    print(pygame.mouse.get_pos())
 class Player:
     def __init__(self, position, height, weight, back_number, name):
         self.fouls = 0
@@ -29,7 +30,17 @@ class Player:
         self.weight = weight
         self.back_number = back_number
         self.name = name
-    def place_player
+        #PG 211 170
+        #SG 183 84
+        #SF 63 264
+        #PF 55 113
+        #C 96 213
+    def place_player(self, coord):
+        self.coord = coord
+        if self == p1:
+            pass
+        pass
+
 
 
 def resize(size):
@@ -206,6 +217,7 @@ def main():
     team2 = generateTeam()
 
     while True:
+        #getMousePos()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
